@@ -8,32 +8,16 @@ const routes = require('./routes');
 const app = express();
 
 // CORS 설정
-const corsOptions = {
-  origin: function (origin, callback) {
-    // 개발 환경에서는 모든 origin 허용
-    if (process.env.NODE_ENV === 'development') {
-      return callback(null, true);
-    }
-    
-    // 프로덕션 환경에서는 허용된 origin만 허용
-    const allowedOrigins = process.env.ALLOWED_ORIGINS 
-      ? process.env.ALLOWED_ORIGINS.split(',')
-      : [];
-    
-    // origin이 없거나 허용된 목록에 있으면 허용
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('CORS 정책에 의해 차단되었습니다.'));
-    }
-  },
+app.use(cors({
+  origin: [
+    'https://yunn-shoppingmall-pront.vercel.app', // 내 Vercel 프론트엔드 주소
+    'http://localhost:3000',                     // 로컬 테스트용
+    'http://localhost:5173'                      // Vite 로컬 테스트용
+  ],
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-};
-
-// Middleware
-app.use(cors(corsOptions));
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
