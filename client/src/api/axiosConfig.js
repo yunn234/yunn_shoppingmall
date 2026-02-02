@@ -2,7 +2,9 @@ import axios from 'axios';
 
 // axios 인스턴스 생성
 const apiClient = axios.create({
-  baseURL: '/api', // Vite proxy를 통해 서버로 요청
+  // 환경변수가 있으면 쓰고, 없으면 Render 백엔드 주소를 직접 사용
+  baseURL: (import.meta.env?.VITE_API_URL || process.env?.REACT_APP_API_URL || 'https://yunn-shoppingmall-backend.onrender.com/api'),
+  withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
   },
