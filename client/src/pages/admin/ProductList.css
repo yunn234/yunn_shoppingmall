@@ -1,0 +1,319 @@
+.product-list-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.product-list-main {
+  flex: 1;
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+.product-list-header {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #333;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Content */
+.product-list-content {
+  padding: 2rem;
+  flex: 1;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.action-btn {
+  padding: 0.75rem 2rem;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #333;
+}
+
+.action-btn.active {
+  background-color: #333;
+  color: #ffffff;
+  border-color: #333;
+}
+
+/* Table Container */
+.products-table-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.loading-message,
+.empty-message {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Products Table */
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.products-table thead {
+  background-color: #f9f9f9;
+}
+
+.products-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+  font-size: 0.9rem;
+}
+
+.products-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+  overflow: visible !important;
+}
+
+.products-table td.image-cell {
+  padding: 0.5rem !important;
+  width: 150px !important;
+  min-width: 150px !important;
+  text-align: center !important;
+}
+
+.products-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Image Cell - 인라인 스타일로 대체되어 최소한의 스타일만 유지 */
+.image-cell {
+  width: 150px !important;
+  min-width: 150px !important;
+  padding: 0.5rem !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+.no-image {
+  width: 120px;
+  min-width: 120px;
+  height: 120px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* Name Cell */
+.name-cell {
+  font-weight: 500;
+  color: #333;
+  min-width: 200px;
+}
+
+/* Category Cell */
+.category-cell {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Price Cell */
+.price-cell {
+  font-weight: 600;
+  color: #333;
+  min-width: 120px;
+}
+
+/* Status Cell */
+.status-cell {
+  min-width: 100px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-badge.active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.inactive {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Action Cell */
+.action-cell {
+  min-width: 150px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  transition: all 0.3s;
+}
+
+.edit-btn {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.edit-btn:hover {
+  background-color: #e8e8e8;
+}
+
+.delete-btn {
+  background-color: #fee;
+  color: #e74c3c;
+}
+
+.delete-btn:hover {
+  background-color: #fdd;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.page-btn {
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.page-btn:hover:not(:disabled) {
+  background-color: #f5f5f5;
+  border-color: #333;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-size: 0.9rem;
+  color: #666;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .products-table {
+    font-size: 0.9rem;
+  }
+
+  .image-cell {
+    width: 120px;
+    min-width: 120px;
+  }
+
+  .no-image {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    min-height: 100px;
+  }
+
+  .name-cell {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-list-main {
+    margin-left: 0;
+  }
+
+  .products-table-container {
+    overflow-x: auto;
+  }
+
+  .products-table {
+    min-width: 800px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    width: 100%;
+  }
+}

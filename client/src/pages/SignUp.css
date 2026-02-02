@@ -1,0 +1,247 @@
+.signup-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-content h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.signup-form {
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+  font-size: 0.9rem;
+  text-align: left;
+  width: 100%;
+}
+
+.required {
+  color: #e74c3c;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.form-group input.error {
+  border-color: #e74c3c;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input-wrapper input {
+  padding-right: 3rem;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.25rem;
+  color: #666;
+}
+
+.error-message {
+  display: block;
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.agreement-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.agreement-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.agreement-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.agreement-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+}
+
+.agreement-checkbox input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.agreement-checkbox span {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.view-link {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.view-link:hover {
+  color: #333;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #888;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #666;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.benefits-box {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.benefits-box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.benefits-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-box li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.benefits-box li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #333;
+}
+
+.login-link {
+  text-align: center;
+  margin: 2rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.login-link button {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.login-link button:hover {
+  color: #000;
+}
+
+.copyright {
+  text-align: center;
+  color: #999;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}

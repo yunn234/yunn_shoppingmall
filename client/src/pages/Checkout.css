@@ -1,0 +1,442 @@
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.checkout-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.checkout-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.checkout-loading {
+  text-align: center;
+  padding: 4rem;
+  color: #666;
+}
+
+.checkout-section {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.form-group input[readOnly] {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.address-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.address-row input {
+  flex: 1;
+}
+
+.address-search-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.address-search-btn:hover {
+  background-color: #555;
+}
+
+.phone-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.phone-row select {
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.phone-row input {
+  flex: 1;
+}
+
+.email-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.email-row input {
+  flex: 1;
+}
+
+.email-row span {
+  font-size: 1rem;
+  color: #666;
+}
+
+.direct-input-btn {
+  padding: 0.75rem 1rem;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.direct-input-btn:hover {
+  background-color: #e8e8e8;
+}
+
+.form-note {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
+/* 주문상품 */
+.order-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.order-item-info {
+  flex: 1;
+}
+
+.order-item-info h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.order-item-option {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.order-item-quantity {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.order-item-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+.shipping-fee-info {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 할인/부가결제 */
+.coupon-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.coupon-input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.coupon-input-row input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.apply-coupon-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.apply-coupon-btn:hover {
+  background-color: #555;
+}
+
+.applied-amount {
+  font-size: 0.9rem;
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+/* 결제정보 */
+.payment-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.summary-row.total {
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  border-top: 2px solid #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.final-amount {
+  color: #0066cc;
+  font-size: 1.3rem;
+}
+
+/* 결제수단 */
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.payment-method-btn {
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.payment-method-btn:hover {
+  border-color: #333;
+  background-color: #f9f9f9;
+}
+
+.payment-method-btn.active {
+  border-color: #0066cc;
+  background-color: #e6f2ff;
+  color: #0066cc;
+  font-weight: 600;
+}
+
+/* 현금영수증 / 세금계산서 */
+.receipt-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.receipt-option {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.receipt-option label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.receipt-option input[type="radio"] {
+  cursor: pointer;
+}
+
+/* 약관 동의 */
+.agreement-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.agreement-all {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.agreement-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.agreement-item input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.view-link {
+  margin-left: auto;
+  color: #0066cc;
+  font-size: 0.85rem;
+}
+
+/* 결제하기 버튼 */
+.checkout-footer {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+}
+
+.checkout-submit-btn {
+  width: 100%;
+  padding: 1.25rem;
+  background-color: #333333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-submit-btn:hover {
+  background-color: #555555;
+}
+
+.checkout-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .checkout-content {
+    padding: 0 0.5rem;
+    margin: 1rem auto;
+  }
+
+  .checkout-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .checkout-section {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .payment-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-row {
+    flex-direction: column;
+  }
+
+  .phone-row select {
+    width: 100%;
+  }
+
+  .email-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .email-row span {
+    display: none;
+  }
+
+  .checkout-footer {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+}
